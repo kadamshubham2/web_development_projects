@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h4>Please Register your face here</h4>
+    <p class="flash-message">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul style="color: green;">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+    {% if filename %}
+        <div class="text-center">
+            <img src="{{ url_for('display_image', filename=filename) }}" class="rounded">
+        </div>
+    {% endif %}
+    <div id="form">
+        <form method="post" action="/" enctype="multipart/form-data">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <div class="file-upload">
+                <input type="file" id="file" name="file">
+                <input type="submit" id="upload" value="Register">
+            </div>
+        </form>
+    </div>
+    <form action="{{ url_for('recognize_face') }}" method="GET">
+    <button id="btn" type="submit">Go to Recognize Page</button>
+    </form>
+</body>
+</html>

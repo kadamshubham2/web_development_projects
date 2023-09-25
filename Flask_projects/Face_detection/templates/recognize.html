@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div id="recognize">
+        <h4>Please Verify your face here</h4>
+        <p class="flash-message">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul style="color: green;">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+        </p>
+        
+        {% if filename %}
+        <div class="text-center">
+            <img src="{{ url_for('display_image', filename=filename) }}" class="rounded">
+        </div>
+        {% endif %}
+
+        <div id="form">
+            <form method="POST" action="/recognize" enctype="multipart/form-data">
+                <div class="file-upload">
+                    <input type="file" id="file" name="file">
+                    <input style="color: #007bff;" type="submit" id="verify" value="Verify">
+                </div>
+            </form>
+        </div>
+
+        {% if recognized_name %}
+        <div>
+            <p style="color: green;" class="verification-result">Verification Result: {{ recognized_name }}</p>
+        </div>
+        {% endif %}
+
+        <form method="GET">
+            <button id="btn" type="submit">Go to Register Page</button>
+        </form>
+    </div>
+</body>
+</html>
