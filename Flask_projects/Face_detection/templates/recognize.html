@@ -42,8 +42,8 @@
         </div>
         {% endif %}
 
-        <form method="GET">
-            <button id="btn" type="submit">Go to Register Page</button>
+        <form action="{{ url_for('upload_image') }}" method="GET">
+            <button id="btn" type="submit"> Go to Register Page</button>
         </form>
     </div>
 </body>

@@ -26,7 +26,7 @@ def display_image(filename):
 def upload_form():
     return render_template('register.html')
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET','POST'])
 def upload_image():
     if 'file' not in request.files:
         flash('No file part')
