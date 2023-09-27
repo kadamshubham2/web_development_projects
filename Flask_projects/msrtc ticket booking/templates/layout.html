@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MSRTC</title>
+
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="heading-class clearfix">
+        <h2 class="left">Toll Free - Helpline No.: 1800 22 1250</h2>
+        <h2 class="right">OUR MOTTO : "Safe & Accident Free Bus Service"</h2> 
+    </div>
+    <div class="header">
+        <a href="https://msrtc.maharashtra.gov.in/index.php">
+            <img src="{{url_for('static', filename='images/logo.png')}}" alt="logo">
+        </a>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">RTI Act</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Tender</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Feedback</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">FAQs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Recruitment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="bannerarea">
+        <div class="bigbuttons">
+            <ul class="online">
+                <li class="onlinebooking">
+                    <a href="http://public.msrtcors.com/ticket_booking/index.php">
+                        <h3>Online Booking</h3>
+                        <i>e Ticket Booking</i>
+                    </a>
+                </li>
+                <li class="tours">
+                    <a href="http://49.50.76.128/complaints">
+                        <h3>Check Status</h3>
+                    </a>
+                </li>
+                <li class="mobibook">
+                    <a href="https://msrtc.maharashtra.gov.in/documents/IOS Mobile App_User Manual.pdf">
+                        <h3>MSRTC Mobile Reservation App</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="booking">
+            <h2>Bus TimeTable</h2>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
