@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} {% endblock %}
+
+{% block content %}
+    {% if category_details %}
+        {% for post in category_details %}
+        <h3>{{ category }}</h3>
+            <li>
+                {{post.author}} - {{post.post_date}} <a href="{% url 'article_detail' post.pk %}">{{post.title}} </a> 
+                {% if user.is_authenticated %}
+                    <small><a href="{% url 'update_post' post.pk %}">(Update)</a></small>&nbsp;or
+                    <small><a href="{% url 'delete_post' post.pk %}">(Delete)</a></small>  <br> 
+                {% endif %}
+                <br>
+                {{post.body|slice:":200"}} <br>
+            </li> 
+        {% endfor %}
+
+    {% else %}
+            <h3>Sorry this page does not exist</h3>
+    {% endif %}
+{% endblock %}

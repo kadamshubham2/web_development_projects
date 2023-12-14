@@ -1,0 +1,20 @@
+body {
+    background-color: #317773;
+}
+
+.signup {
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: azure;
+    padding: 0px 10px 5px 10px;
+    width: 320px;
+    height: 350px;
+    margin: 100px auto 0 auto;
+    text-align: center;
+}
+
+.signup-name {
+    font-size: large;
+    font-weight: bold;
+    background-color: aqua;
+}
